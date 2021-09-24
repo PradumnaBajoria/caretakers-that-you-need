@@ -1,0 +1,15 @@
+.infocont {}
+
+.infoinside {}
+
+.infoentry {
+    display: flex;
+    flex-direction: row;
+    max-height: 70px;
+}
+
+.infoinside p {
+    margin-right: 50px;
+    margin-bottom: 30px;
+    font-size: 23px;
+}
