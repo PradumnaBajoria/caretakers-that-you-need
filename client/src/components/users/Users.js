@@ -1,12 +1,15 @@
-import React from 'react'
-import "./Users.scss"
-
+import React from "react";
+import "./Users.scss";
 function Users() {
-    return (
-        <div>
-            <h1>Hello User</h1>
-        </div>
-    )
+  return (
+    <div className="users">
+      <div className="header">
+        <h1>Employee</h1>
+      </div>
+      <div className="form">form</div>
+      <div className="emp">emp</div>
+    </div>
+  );
 }
 
-export default Users
+export default Users;
