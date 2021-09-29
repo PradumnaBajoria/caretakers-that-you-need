@@ -1,7 +1,9 @@
 import React from "react";
 import Home from "../home/home";
 import "./Users.scss";
-import UserData from "../data/UserData"
+import UserData from "./UserData"
+import UserForm from "./UserForm"
+
 
 function Users() {
   return (
@@ -13,21 +15,7 @@ function Users() {
         
         {/* Form */}
         <div>
-          Hello there
-          Hello thereHello thereHello thereHello thereHello thereHello thereHello there
-          <br />
-          Hello thereHello thereHello thereHello thereHello thereHello thereHello there
-          <br />Hello thereHello thereHello thereHello thereHello thereHello thereHello there
-          <br />Hello thereHello thereHello thereHello thereHello thereHello thereHello there
-          <br />Hello thereHello thereHello thereHello thereHello thereHello thereHello there
-          <br />Hello thereHello thereHello thereHello thereHello thereHello thereHello there
-          <br />Hello thereHello thereHello thereHello thereHello thereHello thereHello there
-          <br />Hello thereHello thereHello thereHello thereHello thereHello thereHello there
-          <br />Hello thereHello thereHello thereHello thereHello thereHello thereHello there
-          <br />Hello thereHello thereHello thereHello thereHello thereHello thereHello there
-          <br />Hello thereHello thereHello thereHello thereHello thereHello thereHello there
-          <br />Hello thereHello thereHello thereHello thereHello thereHello thereHello there
-          <br />
+          <UserForm />
         </div>
 
         {/* Data */}
