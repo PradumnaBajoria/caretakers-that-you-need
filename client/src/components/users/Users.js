@@ -1,9 +1,8 @@
 import React from "react";
 import Home from "../home/home";
 import "./Users.scss";
-import UserData from "./UserData"
-import UserForm from "./UserForm"
-
+import UserData from "./UserData";
+import UserForm from "./UserForm";
 
 function Users() {
   return (
@@ -12,9 +11,9 @@ function Users() {
         <div className="header">
           <h1>Employee</h1>
         </div>
-        
+
         {/* Form */}
-        <div>
+        <div className="form">
           <UserForm />
         </div>
 
