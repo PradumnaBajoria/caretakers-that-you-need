@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import { useHistory } from "react-router";
 import axios from "axios";
-
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
@@ -12,6 +11,7 @@ import Box from "@material-ui/core/Box";
 import ResetPass from "./resetpass";
 import PropTypes from "prop-types";
 import AccInfo from "./accinfo";
+import Home from "../home/home";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -95,7 +95,7 @@ const AccountPage = () => {
   };
 
   return (
-    <>
+    <Home>
       <div className={classes.root}>
         <Tabs
           orientation="vertical"
@@ -115,7 +115,7 @@ const AccountPage = () => {
           <ResetPass user={root} />
         </TabPanel>
       </div>
-    </>
+    </Home>
   );
 };
 

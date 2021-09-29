@@ -45,7 +45,7 @@ function App() {
     <>
       <BrowserRouter>
         <div>
-          <Home>
+          
           <Switch>
             <Route path="/" component={temp} exact></Route>
             <Route path="/login" component={LogSign} exact></Route>
@@ -59,7 +59,7 @@ function App() {
 
             {/* <Route path="/home" component={HomePage} exact></Route> */}
           </Switch>
-          </Home>
+          
         </div>
       </BrowserRouter>
     </>

@@ -1,11 +1,12 @@
 import React from 'react'
+import Home from '../home/home'
 import "./Bookings.scss"
 
 function Bookings() {
     return (
-        <div>
+        <Home>
             <h1>Bookings</h1>
-        </div>
+        </Home>
     )
 }
 

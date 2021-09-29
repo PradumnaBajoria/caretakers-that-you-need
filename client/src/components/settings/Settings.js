@@ -1,11 +1,12 @@
 import React from 'react'
+import Home from '../home/home'
 import "./Settings.scss"
 
 function Settings() {
     return (
-        <div>
+        <Home>
             <h1>Settings</h1>
-        </div>
+        </Home>
     )
 }
 
