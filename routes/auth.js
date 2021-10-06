@@ -8,12 +8,13 @@ const cors = require("cors");
 //Initializing
 router.use(cors());
 router.use(bodyParser.urlencoded({ extended: true }));
-const user = require("../models/signupmodels");
+const users = require("../models/signupmodels");
 const AuthMid = require("../middleware/authmid");
 
 
 router.post("/signup", async(req, res) => {
     try {
+        console.log("H1")
 
         if (!req.body.emailId ||
             !req.body.password ||
@@ -27,13 +28,19 @@ router.post("/signup", async(req, res) => {
                 .status(400)
                 .json({ message: "Minimum Password Length Is 8 Characters" });
         }
+        // console.log("H2")
+
         const salt = await bcrypt.genSalt(10);
         const hashedPass = await bcrypt.hash(req.body.password, salt);
-        const userExist = await user.findOne({ emailId: req.body.emailId });
-        if (userExist) {
-            res.status(400).json({ message: "Email-Id Already Registered..!!" });
-        }
-        const newUser = new user({
+        // console.log("H2")
+
+        // const userExist = await users.findOne({ emailId: req.body.emailId });
+        // if (userExist) {
+        //     res.status(400).json({ message: "Email-Id Already Registered..!!" });
+        // }
+        // console.log("H2")
+
+        const newUser = new users({
             fullName: req.body.fullName,
             emailId: req.body.emailId,
             password: hashedPass,
@@ -51,6 +58,8 @@ router.post("/signup", async(req, res) => {
                 res.status(500).json(error);
             });
     } catch (err) {
+        console.log('Hello')
+        console.log(err)
         res.status(500).json(err);
     }
 });
@@ -68,7 +77,7 @@ router.post("/login", async(req, res) => {
                 .status(400)
                 .json({ message: "Please Fill All The Details..!!" });
         }
-        const userLogin = await user.findOne({ emailId: req.body.logEmail });
+        const userLogin = await users.findOne({ emailId: req.body.logEmail });
         if (userLogin === null) {
             console.log("inside null");
             res
@@ -110,7 +119,7 @@ router.patch("/resetpass/:id", async(req, res) => {
         const temp = req.params.id;
         if (temp !== null) {
             console.log(temp)
-            const result = await user.findByIdAndUpdate(temp, req.body, { new: true });
+            const result = await users.findByIdAndUpdate(temp, req.body, { new: true });
             console.log(result);
             res.status(200).json({ message: "Password Updated..!!" });
         } else {
@@ -127,7 +136,7 @@ router.get("/forgotpass/:emailid", async(req, res) => {
         const temp = req.params.emailid;
         if (temp !== null) {
             console.log(temp)
-            const result = await user.findOne({ emailId: temp });
+            const result = await users.findOne({ emailId: temp });
             console.log(result);
             if (result) {
                 res.status(200).send(result);

@@ -1,6 +1,5 @@
 //Packages
 const cookieParser = require('cookie-parser');
-const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const express = require("express");
 const dotenv = require("dotenv");
@@ -14,8 +13,6 @@ const Port = process.env.PORT || 5000;
 // Server Middlewares
 app.use(cors());
 app.use(cookieParser());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 

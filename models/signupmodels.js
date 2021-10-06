@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
+const dotenv = require("dotenv");
 
 const userSchema = new mongoose.Schema({
     fullName: {
@@ -21,11 +22,13 @@ const userSchema = new mongoose.Schema({
     date: { type: Date, default: Date.now }
 })
 
+dotenv.config();
+
 userSchema.methods.generateAuthToken = async function() {
-    let curtoken = jwt.sign({ _id: this._id }, "illbethebestworkharder")
+    let curtoken = jwt.sign({ _id: this._id }, process.env.TOKEN_JWT)
     this.tokens = this.tokens.concat({ token: curtoken })
     await this.save();
     return curtoken;
 }
 
-module.exports = mongoose.model("user", userSchema);
+module.exports = mongoose.model("users", userSchema);
