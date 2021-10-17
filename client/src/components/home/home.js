@@ -231,14 +231,14 @@ export default function Home({ children }) {
               <p style={{ color: "black" }}>Logs</p>
             </ListItem>
           </Link>
-          <Link exact to="settings" style={{ textDecoration: "none" }}>
+          {/* <Link exact to="settings" style={{ textDecoration: "none" }}>
             <ListItem button>
               <ListItemIcon>
                 <SettingsIcon />
               </ListItemIcon>
               <p style={{ color: "black" }}>Settings</p>
             </ListItem>
-          </Link>
+          </Link> */}
           <Link exact to="children" style={{ textDecoration: "none" }}>
             <ListItem button>
               <ListItemIcon>

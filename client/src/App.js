@@ -9,27 +9,28 @@ import Logs from "./components/logs/Logs";
 import Settings from "./components/settings/Settings";
 import Children from "./components/children/Children";
 import Bookings from "./components/bookings/Bookings";
+import Landing from "./components/landing/Landing";
 
 
 function App() {
-  const temp = () => {
-    return (
-      <>
-        <div style={{ textAlign: "center" }}>
-          <h1>This is the landing Page of Our Website </h1>
-          <h1>Please Keep Patience</h1>
-          <h1>Work Under Progress</h1>
-          <h1>
-            Meanwhile
-            <Link to="/login">
-              <span> Click here </span>
-            </Link>
-            to View our Main App
-          </h1>
-        </div>
-      </>
-    );
-  };
+  // const temp = () => {
+  //   return (
+  //     <>
+  //       <div style={{ textAlign: "center" }}>
+  //         <h1>This is the landing Page of Our Website </h1>
+  //         <h1>Please Keep Patience</h1>
+  //         <h1>Work Under Progress</h1>
+  //         <h1>
+  //           Meanwhile
+  //           <Link to="/login">
+  //             <span> Click here </span>
+  //           </Link>
+  //           to View our Main App
+  //         </h1>
+  //       </div>
+  //     </>
+  //   );
+  // };
 
   const AccPage = () => {
     return (
@@ -45,11 +46,11 @@ function App() {
     <>
       <BrowserRouter>
         <div>
-          
+    
           <Switch>
-            <Route path="/" component={temp} exact></Route>
+            <Route path="/" component={Landing} exact></Route>
             <Route path="/login" component={LogSign} exact></Route>
-            <Route path="/home" component={Home} exact></Route>
+            <Route path="/home" component={Bookings} exact></Route>
             <Route path="/account" component={AccPage} exact></Route>
             <Route path="/users" component={Users} exact></Route>
             <Route path="/logs" component={Logs} exact></Route>
