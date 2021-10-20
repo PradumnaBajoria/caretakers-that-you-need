@@ -8,12 +8,9 @@ function Landing() {
       <h1>
         <marquee>Caretakers! That you need</marquee>
       </h1>
-
       <div className="login">
         <Link to="/login">
-            <h3>
-                <span> Click here to visit your brand new caretaking service </span>
-            </h3>
+          <h3>Login</h3>
         </Link>
       </div>
     </div>
