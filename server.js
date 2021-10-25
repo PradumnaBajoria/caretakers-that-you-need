@@ -28,10 +28,8 @@ dotenv.config();
 mongoose.connect(process.env.DATABASE_ACCESS, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: true,
-}, () => console.log("Database Connected successfully..!!"));
-
+}).then(() => { console.log("Database connected..!!!") })
+    .catch((e) => { console.log(e); });
 
 //Calling Of All Routes
 app.use("/app", routerUrls);

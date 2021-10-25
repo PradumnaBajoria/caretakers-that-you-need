@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
 import bcrypt from "bcryptjs";
@@ -23,7 +23,7 @@ const LogSign = () => {
   const { rootUser, setRootUser } = useContext(userData);
   console.log("inside login page", rootUser);
 
-  // const history = useHistory();
+  const history = useHistory();
   const [InputEmail, setInputEmail] = useState("");
   const [InputPass, setInputPass] = useState("");
   const [InputConfirmPass, setInputConfirmPass] = useState("");
@@ -439,7 +439,7 @@ const LogSign = () => {
                           console.log("sam var", res.data);
                           if (res.status === 200) {
                             // callSignPage();
-                            // history.push("/home");
+                            history.push("/home");
                             setAlboxcont({
                               open: true,
                               message: res.data.message,

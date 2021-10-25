@@ -25,7 +25,7 @@ function UserForm() {
           {/* Component for password */}
           <div className="form-group">
             <label className="">Password</label>
-
+            
             <input
               className="form-control"
               type="password"
