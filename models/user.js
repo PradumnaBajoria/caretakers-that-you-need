@@ -3,8 +3,8 @@ const Schema = database.Schema;
 
 const UserSchema = new Schema(
   {
-    firstName: { type: String, maxlength: 80 },
-    lastName: { type: String, maxlength: 175 },
+    Name: { type: String, maxlength: 80 },
+    // lastName: { type: String, maxlength: 175 },
     phoneNumber: { type: String, maxlength: 24 },
     email: { type: String, maxlength: 255 },
     authenticationUid: { type: String, maxlength: 255 },

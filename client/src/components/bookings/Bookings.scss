@@ -1,24 +1,36 @@
 .bookings {
+  padding-top: 2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: di;
+
+  .row{
+    padding: 1vw;
+  }
+
   .header {
-    background-color: lightblue;
+    background-color: whitesmoke;
+    padding-top: 1vw;
     width: 90vw;
     height: 10vh;
     text-align: center;
   }
 
   .form {
-    height: 50vh;
+    height: 70vh;
     width: 90vw;
-    background-color: lightcoral;
+    background-color: whitesmoke;
     margin: 1vw;
   }
 
+  .submit{
+    color: red;
+  }
   .emp {
+    margin-top: 20px;
     height: 51vh;
     width: 90vw;
-    background-color: lightgreen;
+    background-color: whitesmoke;
   }
 }

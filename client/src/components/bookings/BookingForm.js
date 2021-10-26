@@ -2,72 +2,76 @@ import React from "react";
 
 function UserForm() {
   return (
-    <div className="row mt-4 ">
-      <div className="col-6 col-md-4  offset-sm-1 ">
-        <form>
-          {/* Component for name */}
-          <div className="form-group ">
-            <label className="">Name</label>
-            <input
-              className="form-control"
-              // onChange={handleChange("name")}
-              type="text"
-              // value={name}
-            />
+    <div className=" col-10  offset-sm-1 mt-4">
+      <form>
+        <div class="row">
+          <div class="col">
+            <strong>
+              <label className="">Parent Name</label>
+            </strong>
+            <input className="form-control" type="text" />
           </div>
+          <div class="col">
+            <strong>
+              <label className="">Child Name</label>
+            </strong>
+            <input className="form-control" type="text" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <strong>
+              <label className="">Email</label>
+            </strong>
 
-          {/* Component for email */}
-          <div className="form-group">
-            <label className="">Email</label>
             <input className="form-control" type="email" />
           </div>
+          <div class="col">
+            <strong>
+              <label className="">Fee</label>
+            </strong>
+            <input className="form-control" type="text" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <strong>
+              <label className="">Arrival Time</label>
+            </strong>
+            <input className="form-control" type="text" />
+          </div>
+          <div class="col">
+            <strong>
+              <label className="">Departure Time</label>
+            </strong>
+            <input className="form-control" type="text" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <strong>
+              <label className="">Status</label>
+            </strong>
 
-          {/* Component for password */}
-          <div className="form-group">
-            <label className="">Password</label>
-
+            <input className="form-control" type="text" />
+          </div>
+          <div class="col">
+            <strong>
+              <label className="">Advice from parent</label>
+            </strong>
+            <input className="form-control" type="text" />
+          </div>
+        </div>
+        <div className=" p-3 ">
             <input
               className="form-control"
-              type="password"
+              type="submit"
+              placeholder="Submit"
               // onChange={handleChange("password")}
               // value={password}
             />
           </div>
-        </form>
-      </div>
-
-      <div className=" col-6 col-md-4 offset-sm-2 ">
-        <form>
-          {/* Component for name */}
-          <div className="form-group ">
-            <label className="">Name</label>
-            <input
-              className="form-control"
-              // onChange={handleChange("name")}
-              type="text"
-              // value={name}
-            />
-          </div>
-
-          {/* Component for email */}
-          <div className="form-group">
-            <label className="">Email</label>
-            <input className="form-control" type="email" />
-          </div>
-
-          {/* Component for password */}
-          <div className="form-group">
-            <label className="">Password</label>
-
-            <input
-              className="form-control"
-              type="password"
-              // onChange={handleChange("password")}
-              // value={password}
-            />
-          </div>
-        </form>
-      </div>
+      </form>
     </div>
   );
 }

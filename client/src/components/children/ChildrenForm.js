@@ -7,7 +7,7 @@ function UserForm() {
         <form>
           {/* Component for name */}
           <div className="form-group ">
-            <label className="">Name</label>
+            <label className="">Parent Name</label>
             <input
               className="form-control"
               // onChange={handleChange("name")}
@@ -18,13 +18,13 @@ function UserForm() {
 
           {/* Component for email */}
           <div className="form-group">
-            <label className="">Email</label>
+            <label className="">Child Name</label>
             <input className="form-control" type="email" />
           </div>
 
           {/* Component for password */}
           <div className="form-group">
-            <label className="">Password</label>
+            <label className="">Gender</label>
 
             <input
               className="form-control"
@@ -40,7 +40,7 @@ function UserForm() {
         <form>
           {/* Component for name */}
           <div className="form-group ">
-            <label className="">Name</label>
+            <label className="">Age</label>
             <input
               className="form-control"
               // onChange={handleChange("name")}

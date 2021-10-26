@@ -13,7 +13,7 @@ const ChildSchema = new Schema(
       required: true,
       maxlength: 255,
     },
-    type: {
+    gender: {
       gender: String,
       required: true,
       enum: ["male", "female"],

@@ -33,6 +33,7 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
+    backgroundColor: "peachpuff",
   },
   appBar: {
     transition: theme.transitions.create(["margin", "width"], {
@@ -110,7 +111,7 @@ export default function Home({ children }) {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar className="navouter">
+        <Toolbar className="navouter" style={{backgroundColor: "goldenrod"}}>
           <div className="navleft">
             <IconButton
               color="inherit"

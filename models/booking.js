@@ -1,17 +1,16 @@
-const database = require('../database');
+const database = require("../database");
 const Schema = database.Schema;
-
 
 const BookingSchema = new Schema(
   {
     parents: {
       type: Schema.Types.ObjectId,
-      ref: 'user',
+      ref: "user",
       required: true,
     },
     child: {
       type: Schema.Types.ObjectId,
-      ref: 'child',
+      ref: "child",
       required: true,
     },
     arrival: {
@@ -34,12 +33,7 @@ const BookingSchema = new Schema(
     status: {
       type: String,
       required: true,
-      enum: [
-        "booked",
-        "progress",
-        "cancelled",
-        "completed"
-      ],
+      enum: ["booked", "progress", "cancelled", "completed"],
     },
     cancellationNotes: {
       type: String,
@@ -51,17 +45,17 @@ const BookingSchema = new Schema(
     receipt: [FileSchema],
     createdBy: {
       type: Schema.Types.ObjectId,
-      ref: 'user',
+      ref: "user",
     },
     updatedBy: {
       type: Schema.Types.ObjectId,
-      ref: 'user',
+      ref: "user",
     },
     importHash: { type: String },
   },
-  { timestamps: true },
+  { timestamps: true }
 );
 
-const Booking = database.model('booking', BookingSchema);
+const Booking = database.model("booking", BookingSchema);
 
 module.exports = Booking;
