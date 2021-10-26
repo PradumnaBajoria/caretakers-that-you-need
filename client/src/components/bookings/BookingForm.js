@@ -1,17 +1,18 @@
 import React from "react";
+import "./BookingForm.scss"
 
 function UserForm() {
   return (
-    <div className=" col-10  offset-sm-1 mt-4">
+    <div className="booking-form  offset-sm-1 mt-4 p-4">
       <form>
         <div class="row">
-          <div class="col">
+          <div class="col ">
             <strong>
               <label className="">Parent Name</label>
             </strong>
             <input className="form-control" type="text" />
           </div>
-          <div class="col">
+          <div class="col ">
             <strong>
               <label className="">Child Name</label>
             </strong>
@@ -62,7 +63,7 @@ function UserForm() {
             <input className="form-control" type="text" />
           </div>
         </div>
-        <div className=" p-3 ">
+        <div className="submit p-3">
             <input
               className="form-control"
               type="submit"

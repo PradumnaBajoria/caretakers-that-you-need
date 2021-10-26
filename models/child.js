@@ -25,6 +25,12 @@ const ChildSchema = new Schema(
       maxlength: 255,
     },
 
+    email: {
+      type: String,
+      required: true,
+      maxlength: 255,
+    },
+
     bookings: [
       {
         type: Schema.Types.ObjectId,

@@ -2,18 +2,18 @@ import React from "react";
 
 function UserForm() {
   return (
-    <div className=" col-10  offset-sm-1 mt-4">
+    <div className="booking-form  offset-sm-1 mt-4 p-4">
       <form>
         <div class="row">
-          <div class="col">
+          <div class="col ">
             <strong>
-              <label className="">Parent Name</label>
+              <label className="">Name</label>
             </strong>
             <input className="form-control" type="text" />
           </div>
-          <div class="col">
+          <div class="col ">
             <strong>
-              <label className="">Child Name</label>
+              <label className="">Phone Number</label>
             </strong>
             <input className="form-control" type="text" />
           </div>
@@ -21,14 +21,13 @@ function UserForm() {
         <div class="row">
           <div class="col">
             <strong>
-              <label className="">Email</label>
+              <label className="">Email ID</label>
             </strong>
-
             <input className="form-control" type="email" />
           </div>
           <div class="col">
             <strong>
-              <label className="">Fee</label>
+              <label className="">Age</label>
             </strong>
             <input className="form-control" type="text" />
           </div>
@@ -36,18 +35,18 @@ function UserForm() {
         <div class="row">
           <div class="col">
             <strong>
-              <label className="">Arrival Time</label>
+              <label className="">Gender</label>
             </strong>
             <input className="form-control" type="text" />
           </div>
           <div class="col">
             <strong>
-              <label className="">Departure Time</label>
+              <label className="">Experience(in years)</label>
             </strong>
             <input className="form-control" type="text" />
           </div>
         </div>
-        <div class="row">
+        {/* <div class="row">
           <div class="col">
             <strong>
               <label className="">Status</label>
@@ -61,9 +60,10 @@ function UserForm() {
             </strong>
             <input className="form-control" type="text" />
           </div>
-        </div>
-        <div className=" p-3 ">
+        </div> */}
+        <div className="submit p-3">
           <input
+            className="form-control"
             type="submit"
             placeholder="Submit"
             // onChange={handleChange("password")}

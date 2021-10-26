@@ -8,9 +8,9 @@ const UserSchema = new Schema(
     phoneNumber: { type: String, maxlength: 24 },
     email: { type: String, maxlength: 255 },
     authenticationUid: { type: String, maxlength: 255 },
-    disabled: { type: Boolean, default: false },
+    // disabled: { type: Boolean, default: false },
     // avatars: [FileSchema],
-    roles: [{ type: String }],
+    // roles: [{ type: String }],
     createdBy: {
       type: Schema.Types.ObjectId,
       ref: "user",
