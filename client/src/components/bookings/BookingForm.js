@@ -1,5 +1,4 @@
 import React from "react";
-import "./BookingForm.scss"
 
 function UserForm() {
   return (

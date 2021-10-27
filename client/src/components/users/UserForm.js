@@ -2,7 +2,7 @@ import React from "react";
 
 function UserForm() {
   return (
-    <div className="booking-form  offset-sm-1 mt-4 p-4">
+    <div className="user-form  offset-sm-1 mt-4 p-4">
       <form>
         <div class="row">
           <div class="col ">

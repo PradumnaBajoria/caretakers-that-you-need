@@ -1,8 +1,9 @@
 import React from "react";
 
-function UserForm() {
+
+function ChildrenForm() {
   return (
-    <div className="booking-form  offset-sm-1 mt-4 p-4">
+    <div className="children-form  offset-sm-1 mt-4 p-4">
       <form>
         <div class="row">
           <div class="col ">
@@ -71,4 +72,4 @@ function UserForm() {
   );
 }
 
-export default UserForm;
+export default ChildrenForm;
