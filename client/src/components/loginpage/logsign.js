@@ -46,7 +46,7 @@ const LogSign = () => {
       });
       const userdata = await res.data;
       setRootUser(userdata);
-      console.log("LOGIN KE ANDAR", rootUser);
+      console.log("LOGIN", rootUser);
       if (userdata) {
         console.log("userdata is there..!!");
         // history.push("/home");
@@ -204,7 +204,7 @@ const LogSign = () => {
                           "service_9bpsy9c",
                           "template_v545mxb",
                           {
-                            from_name: "Script To Growth",
+                            from_name: "Caretakers - That you need!",
                             to_name: forUser.fullName,
                             message: mailedotp,
                             user: forEmail,
@@ -546,7 +546,7 @@ const LogSign = () => {
                           .post("/app/signup", reg)
                           .then((res) => {
                             console.log(
-                              "seeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+                              "hello",
                               res.status,
                               res.data,
                               // JSON.parse(res.data)

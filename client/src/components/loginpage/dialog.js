@@ -22,7 +22,7 @@ export default function FormDialog({ dopen, setDopen }) {
         <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            To subscribe to this website, please enter your email address here.
+            To subscribe to our service, please enter your email address here.
             We will send updates occasionally.
           </DialogContentText>
           <TextField
