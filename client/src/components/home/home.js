@@ -256,6 +256,14 @@ export default function Home({ children }) {
               <p style={{ color: "black" }}>Bookings</p>
             </ListItem>
           </Link>
+          <Link exact to="news" style={{ textDecoration: "none" }}>
+            <ListItem button>
+              <ListItemIcon>
+                <BookIcon />
+              </ListItemIcon>
+              <p style={{ color: "black" }}>News</p>
+            </ListItem>
+          </Link>
         </List>
       </Drawer>
       <main

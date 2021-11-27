@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/mittalsam20/PRS#readme",
   "dependencies": {
+    "@mui/icons-material": "^5.2.0",
     "antd": "^4.16.13",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",

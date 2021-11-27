@@ -1,0 +1,15 @@
+body{
+    // overflow: hidden;
+}
+
+.news-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    // margin: 20px;
+    
+    &::-webkit-scrollbar {
+        display: none;
+        scrollbar-width: none;
+    }
+}

@@ -10,6 +10,7 @@ import Settings from "./components/settings/Settings";
 import Children from "./components/children/Children";
 import Bookings from "./components/bookings/Bookings";
 import Landing from "./components/landing/Landing";
+import NewsBoard from "./components/news/news-board/NewsBoard";
 
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
             <Route path="/settings" component={Settings} exact></Route>
             <Route path="/children" component={Children} exact></Route>
             <Route path="/bookings" component={Bookings} exact></Route>
+            <Route path="/news" component={NewsBoard} exact></Route>
 
             {/* <Route path="/home" component={HomePage} exact></Route> */}
           </Switch>
