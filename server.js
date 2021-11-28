@@ -20,6 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 //Importing Routes
 const routerUrls = require("./routes/emailroute");
 const authRoute = require("./routes/auth");
+const bookingRoute = require("./routes/booking");
 
 
 
