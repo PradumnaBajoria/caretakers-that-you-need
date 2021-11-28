@@ -1,11 +1,11 @@
-const database = require("../database");
+const database = require("mongoose");
 const Schema = database.Schema;
 
 const ChildSchema = new Schema(
   {
     parent: {
-      type: Schema.Types.ObjectId,
-      ref: "user",
+      type: String,
+      // ref: "user",
       required: true,
     },
     name: {
@@ -31,21 +31,21 @@ const ChildSchema = new Schema(
       maxlength: 255,
     },
 
-    bookings: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "booking",
-      },
-    ],
-    createdBy: {
-      type: Schema.Types.ObjectId,
-      ref: "user",
-    },
-    updatedBy: {
-      type: Schema.Types.ObjectId,
-      ref: "user",
-    },
-    importHash: { type: String },
+    // bookings: [
+    //   {
+    //     type: Schema.Types.ObjectId,
+    //     ref: "booking",
+    //   },
+    // ],
+    // createdBy: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: "user",
+    // },
+    // updatedBy: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: "user",
+    // },
+    // importHash: { type: String },
   },
   { timestamps: true }
 );

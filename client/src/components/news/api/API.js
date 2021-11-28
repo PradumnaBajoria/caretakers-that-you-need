@@ -3,7 +3,7 @@
 // 4a9457ebc3a44df4abed668f41cb11c6
 
 export const generalUrl = 'https://newsapi.org/v2/everything?' +
-    'q=Caretaker&' +
+    'q=childcare&' +
     'from=2021-11-26&' +
     'sortBy=popularity&' +
     'apiKey=4a9457ebc3a44df4abed668f41cb11c6';
