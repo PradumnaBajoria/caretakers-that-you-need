@@ -78,7 +78,7 @@ function UserForm() {
             </strong>
             <input
               className="form-control"
-              type="text"
+              type="time"
               value={arrival}
               onChange={(e) => {
                 setArrival(e.target.value);
@@ -91,7 +91,7 @@ function UserForm() {
             </strong>
             <input
               className="form-control"
-              type="text"
+              type="time"
               value={departure}
               onChange={(e) => {
                 setDeparture(e.target.value);
@@ -144,19 +144,19 @@ function UserForm() {
                 email: email,
                 advise: advise,
                 status: status,
-                fee: fee
+                fee: fee,
               };
-              console.log(alldata)
+              console.log(alldata);
               var config = {
-                method: 'post',
-                url: 'http://localhost:5000/app/createbook',
-                headers: { 
-                  'Content-Type': 'application/x-www-form-urlencoded'
+                method: "post",
+                url: "http://localhost:5000/app/createbook",
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded",
                 },
-                data : alldata
+                data: alldata,
               };
-              
-              const res = await axios(config)
+
+              const res = await axios(config);
               // const res = await axios.post(
               //   "http://localhost:5000/app/createbook",
               //   alldata
