@@ -147,10 +147,20 @@ function UserForm() {
                 fee: fee
               };
               console.log(alldata)
-              const res = await axios.post(
-                "http://localhost:5000/app/createbook",
-                alldata
-              );
+              var config = {
+                method: 'post',
+                url: 'http://localhost:5000/app/createbook',
+                headers: { 
+                  'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                data : alldata
+              };
+              
+              const res = await axios(config)
+              // const res = await axios.post(
+              //   "http://localhost:5000/app/createbook",
+              //   alldata
+              // );
               console.log("after clicking the submit button add", res.data);
 
               setParent("");
