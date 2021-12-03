@@ -130,14 +130,14 @@ export default function DataGridDemo() {
       
       
       setId(ele._id),
-      setParent(ele.parent),
+      setParent(ele.parents),
       setChild(ele.child),
       setEmail(ele.email),
       setFee(ele.fee),
       setArrival(ele.arrival),
       setDeparture(ele.departure),
       setStatus(ele.status),
-      setAdvice(ele.advice),
+      setAdvice(ele.advise),
     ]
     );
     console.log(temp)
