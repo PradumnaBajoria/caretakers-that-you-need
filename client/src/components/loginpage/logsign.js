@@ -195,7 +195,7 @@ const LogSign = () => {
                   e.preventDefault();
                   console.log(mailedotp);
                   axios
-                    .get(`/app/forgotpass/${forEmail}`)
+                    .get(`http://localhost:5000/app/forgotpass/${forEmail}`)
                     .then(function (response) {
                       setforuser(response.data);
                       console.log(JSON.stringify(response.data));
@@ -298,7 +298,7 @@ const LogSign = () => {
                     emailjs
                       .send(
                         "service_9bpsy9c",
-                        "template_iibcj0f",
+                        "template_v545mxb",
                         {
                           to_name: forUser.fullName,
                           message: newPass,

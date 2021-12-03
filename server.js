@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 
 
 //Importing Routes
-// const routerUrls = require("./routes/emailroute");
+const routerUrls = require("./routes/emailroute");
 const authRoute = require("./routes/auth");
 const bookingRoute = require("./routes/bookingroute");
 // const childRoute = require("./routes/childroute");
@@ -33,7 +33,7 @@ mongoose.connect(process.env.DATABASE_ACCESS, {
     .catch((e) => { console.log(e); });
 
 //Calling Of All Routes
-// app.use("/app", routerUrls);
+app.use("/app", routerUrls);
 app.use("/app", bookingRoute);
 // app.use("/app", childRoute);
 // app.use("/app", userRoute);
