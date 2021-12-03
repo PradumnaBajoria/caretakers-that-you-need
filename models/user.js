@@ -9,7 +9,7 @@ const UserSchema = new Schema(
     email: { type: String, maxlength: 255 },
     gender: {
       gender: String,
-      required: true,
+      // required: true,
       enum: ["male", "female"],
     },
     age: {

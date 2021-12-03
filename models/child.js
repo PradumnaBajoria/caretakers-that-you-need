@@ -8,14 +8,14 @@ const ChildSchema = new Schema(
       // ref: "user",
       required: true,
     },
-    name: {
+    child: {
       type: String,
       required: true,
       maxlength: 255,
     },
     gender: {
       gender: String,
-      required: true,
+      // required: true,
       enum: ["male", "female"],
     },
 
@@ -24,7 +24,7 @@ const ChildSchema = new Schema(
       required: true,
       maxlength: 255,
     },
-
+ 
     email: {
       type: String,
       required: true,

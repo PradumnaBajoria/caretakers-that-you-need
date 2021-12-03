@@ -160,14 +160,14 @@ export default function Home({ children }) {
             >
               Home
             </NavLink>
-            <NavLink
+            {/* <NavLink
               className="navlink"
               activeClassName="selected"
               exact
               to="/account"
             >
               Account
-            </NavLink>
+            </NavLink> */}
             <Link
               className="navlink"
               onClick={() => {
@@ -224,14 +224,14 @@ export default function Home({ children }) {
               <p style={{ color: "black" }}>Users</p>
             </ListItem>
           </Link>
-          <Link exact to="logs" style={{ textDecoration: "none" }}>
+          {/* <Link exact to="logs" style={{ textDecoration: "none" }}>
             <ListItem button>
               <ListItemIcon>
                 <DnsIcon />
               </ListItemIcon>
               <p style={{ color: "black" }}>Logs</p>
             </ListItem>
-          </Link>
+          </Link> */}
           {/* <Link exact to="settings" style={{ textDecoration: "none" }}>
             <ListItem button>
               <ListItemIcon>

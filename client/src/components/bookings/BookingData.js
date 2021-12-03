@@ -1,9 +1,21 @@
-import {useState,useEffect} from "react";
+import { useState, useEffect } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import axios from "axios";
 
-
 export default function DataGridDemo() {
+
+
+  const [id, setId] = useState("");
+  const [parent, setParent] = useState("");
+  const [child, setChild] = useState("");
+  const [email, setEmail] = useState("");
+  const [fee, setFee] = useState("");
+  const [arrival, setArrival] = useState("");
+  const [departure, setDeparture] = useState("");
+  const [status, setStatus] = useState("");
+  const [advice, setAdvice] = useState("");
+
+
   const columns = [
     {
       field: "parent",
@@ -60,36 +72,35 @@ export default function DataGridDemo() {
       editable: true,
     },
   ];
-  
-  const rows = [
+
+  const abc = [
     {
-      id: 1,
-      parent: "Anshul Sharma",
-      child: "Ram Sharma",
-      email: "anshul@gmail.com",
-      fee: "2000",
-      arrival: "12:46 PM",
-      departure: "04:00 pM",
-      status: "completed",
-      advice: "None",
+      id: id,
+      parent: parent,
+      child: child,
+      email: email,
+      fee: fee,
+      arrival: arrival,
+      departure: departure,
+      status: status,
+      advice: advice,
     },
   ];
-  
-const [a,setA]=useState([]);
-const [data,setData]=useState([{
-  id: "",
-  parent: "",
-  child: "",
-  email: "",
-  fee: "",
-  arrival: "",
-  departure: "",
-  status: "",
-  advice: "",
-}])
 
-
-
+  const [a, setA] = useState([]);
+  const [data, setData] = useState([
+    {
+      id: "",
+      parent: "",
+      child: "",
+      email: "",
+      fee: "",
+      arrival: "",
+      departure: "",
+      status: "",
+      advice: "",
+    },
+  ]);
 
   const retUrl = async () => {
     const res = await axios.get("http://localhost:5000/app/getbook");
@@ -103,14 +114,41 @@ const [data,setData]=useState([{
 
   useEffect(() => {
     console.log("filtered se pehle all recs", a);
-    a.map((ele)=>(setData(ele._id,ele.parents,ele.child,ele.email,ele.fee,ele.arrival,ele.departure,ele.status,ele.advise)))
+    let temp=1;
+    a.map((ele) =>[
+      setData([
+        ele._id,
+        ele.parents,
+        ele.child,
+        ele.email,
+        ele.fee,
+        ele.arrival,
+        ele.departure,
+        ele.status,
+        ele.advise
+      ], ...data),
+      
+      
+      setId(ele._id),
+      setParent(ele.parent),
+      setChild(ele.child),
+      setEmail(ele.email),
+      setFee(ele.fee),
+      setArrival(ele.arrival),
+      setDeparture(ele.departure),
+      setStatus(ele.status),
+      setAdvice(ele.advice),
+    ]
+    );
+    console.log(temp)
+    console.log("DATA", data);
   }, [a]);
 
   return (
     <div style={{ height: "100%", width: "100%" }}>
       {/* {console.log(a)} */}
       <DataGrid
-        rows={rows}
+        rows={abc}
         columns={columns}
         pageSize={4}
         rowsPerPageOptions={[4]}
@@ -120,10 +158,6 @@ const [data,setData]=useState([{
     </div>
   );
 }
-
-
-
-
 
 // {
 //   id: 2,

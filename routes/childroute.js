@@ -15,13 +15,13 @@ router.get('/getchild', (req, res) => {
 
 router.post("/createchild", async(req, res) => {
     try {
-        console.log(req.body.parents)
+        console.log(req.body.parent)
         console.log(req.body)
-        if (!req.body.parents || !req.body.child || !req.body.email || !req.body.age || !req.body.gender) {
+        if (!req.body.parent || !req.body.child || !req.body.email || !req.body.age) {
             return res.status(400).json({ error: "type/amount Missing..!!" })
         }
         const newchild = new child({
-            parents: req.body.parents,
+            parent: req.body.parent,
             child: req.body.child,
             email: req.body.email,
             age: req.body.age,
