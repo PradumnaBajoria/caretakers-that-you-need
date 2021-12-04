@@ -73,7 +73,7 @@ export default function DataGridDemo() {
     },
   ];
 
-  const abc = [
+  const rows = [
     {
       id: id,
       parent: parent,
@@ -88,19 +88,19 @@ export default function DataGridDemo() {
   ];
 
   const [a, setA] = useState([]);
-  const [data, setData] = useState([
-    {
-      id: "",
-      parent: "",
-      child: "",
-      email: "",
-      fee: "",
-      arrival: "",
-      departure: "",
-      status: "",
-      advice: "",
-    },
-  ]);
+  // const [data, setData] = useState([
+  //   {
+  //     id: "",
+  //     parent: "",
+  //     child: "",
+  //     email: "",
+  //     fee: "",
+  //     arrival: "",
+  //     departure: "",
+  //     status: "",
+  //     advice: "",
+  //   },
+  // ]);
 
   const retUrl = async () => {
     const res = await axios.get("http://localhost:5000/app/getbook");
@@ -116,17 +116,17 @@ export default function DataGridDemo() {
     console.log("filtered se pehle all recs", a);
     let temp=1;
     a.map((ele) =>[
-      setData([
-        ele._id,
-        ele.parents,
-        ele.child,
-        ele.email,
-        ele.fee,
-        ele.arrival,
-        ele.departure,
-        ele.status,
-        ele.advise
-      ], ...data),
+      // setData([
+      //   ele._id,
+      //   ele.parents,
+      //   ele.child,
+      //   ele.email,
+      //   ele.fee,
+      //   ele.arrival,
+      //   ele.departure,
+      //   ele.status,
+      //   ele.advise
+      // ], ...data),
       
       
       setId(ele._id),
@@ -141,14 +141,14 @@ export default function DataGridDemo() {
     ]
     );
     console.log(temp)
-    console.log("DATA", data);
+    // console.log("DATA", data);
   }, [a]);
 
   return (
     <div style={{ height: "100%", width: "100%" }}>
       {/* {console.log(a)} */}
       <DataGrid
-        rows={abc}
+        rows={rows}
         columns={columns}
         pageSize={4}
         rowsPerPageOptions={[4]}

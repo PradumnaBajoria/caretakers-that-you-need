@@ -22,7 +22,7 @@ const routerUrls = require("./routes/emailroute");
 const authRoute = require("./routes/auth");
 const bookingRoute = require("./routes/bookingroute");
 const childRoute = require("./routes/childroute");
-const userRoute = require("./routes/userroute");
+// const userRoute = require("./routes/userroute");
 
 //DB Connection
 dotenv.config();
@@ -37,7 +37,7 @@ app.use("/app", authRoute);
 app.use("/app", routerUrls);
 app.use("/app", bookingRoute);
 app.use("/app", childRoute);
-app.use("/app", userRoute);
+// app.use("/app", userRoute);
 
 
 //404 Page for the webApp

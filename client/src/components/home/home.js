@@ -168,7 +168,15 @@ export default function Home({ children }) {
             >
               Account
             </NavLink> */}
-            <Link
+            <NavLink
+              exact
+              className="navlink"
+              activeClassName="selected"
+              to="/"
+            >
+              Logout
+            </NavLink>
+            {/* <Link
               className="navlink"
               onClick={() => {
                 axios
@@ -188,7 +196,7 @@ export default function Home({ children }) {
               }}
             >
               Logout
-            </Link>
+            </Link> */}
           </div>
         </Toolbar>
       </AppBar>
